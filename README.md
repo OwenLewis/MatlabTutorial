@@ -60,7 +60,7 @@ Anything that can be done in the "Command Window" from the previous image can be
 
 Matlab uses a "path" system in order to know where to look for functions and data in order to carry out whatever tasks you attempt. 
 Roughly speaking, the "path" is giant list of directories on your computer where Matlab will look for functions that you call. 
-If information is not in the path, Matlabe effectively does not know about it. 
+If information is not in the path, Matlab effectively does not know about it. 
 By default, the path contains a large collection of directories within the location that Matlab was installed on your system. 
 If you wish to see the default path, you can use the following Matlab command by typing it into the Command Window and pressing enter:
 ```matlab
