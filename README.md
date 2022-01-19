@@ -225,7 +225,7 @@ They are private (if you want to know more, look up the subject of "scoping" wit
 Effectively, those variable names are completely internal to the function named "solve_matrix". 
 This is actually one of the major advantages to functions as opposed to scripts. 
 * The numerical result is the same as our example script, but the name is different. 
-This is because our last command assigned the name ``foo`` to whatever the output of the function "solve_matrix". 
+This is because our last command assigned the name ``foo`` to the output of the function "solve_matrix". 
 The internal workings of the function (and thus the variable named ``x``) are completely obscured. 
 Think of functions as a black box. Input goes in, output comes out, and we have no knowedge of their internal workings when we call them from the Command Window. 
 
@@ -251,8 +251,8 @@ It can be useful to put some time into these help sections of your functions: ex
 Now that we have gone over the bare basics of getting Matlab working, it is probably worthwhile to go through some exercises in creating and manipulating variables in Matlab. 
 Fortunately, my colleague Jacob Schroder has already put together a nice document to this effect. 
 Below, you will find a PDF version of a brief walkthough that he created. 
-I have also included a Matlab script file containin, in order, all of the various commands that get invoked in the walkthrough. 
-A few of these commands actually call simply Matlab functions, so I have included those as well. 
+I have also included a Matlab script file containig, in order, all of the various commands that get invoked in the walkthrough. 
+A few of these commands actually call simple Matlab functions, so I have included those as well. 
 
 * The pdf file can be found right [here](./matlab_tutorial.pdf).
 * A Matlab script that mirrors the walkthrough can be found [here](./matlab_tutorial.m).
