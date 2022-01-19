@@ -165,7 +165,7 @@ If you look at the Workspace window, you will also notice that the variables ``A
 This is because any variables/data that a script creates will act exactly as if you had created them manually via the Command Window. 
 
 <h3>Functions</h3>
-Matlab files that contain _functions_ operate a little bit differently. 
+Matlab files that contain functions operate a little bit differently. 
 The easiest way to think of them is as mathematical functions. 
 They take input, and give back output. 
 A file that contains a function must begin and end with particular syntax:
@@ -223,7 +223,7 @@ This is actually one of the major advantages to functions as opposed to scripts.
 * The numerical result is the same as our example script, but the name is different. 
 This is because our last command assigned the name ``foo`` to whatever the output of the function "solve_matrix". 
 The internal workings of the function (and thus the variable named ``x``) are completely obscured. 
-Think of functions as a black box. Input goes in, output comes out, and we have know knowedge of their internal workings when we call them from the Command Window. 
+Think of functions as a black box. Input goes in, output comes out, and we have no knowedge of their internal workings when we call them from the Command Window. 
 
 Finally, I want to draw attention to the line of comments at the top of my theoretical function file. 
 Any comments that come above line defining the inputs, function name, and outputs are treated as the "help" section of the function. 
@@ -248,3 +248,6 @@ Below, you will find a PDF version of a brief walkthough that he created.
 I have also included a Matlab script file containin, in order, all of the various commands that get invoked in the walkthrough. 
 A few of these commands actually call simply Matlab functions, so I have included those as well. 
 
+* The pdf file can be found right [here](./matlab_tutorial.pdf).
+* A Matlab script that mirrors the walkthrough can be found [here](./matlab_tutorial.m).
+* The tutorial involves steps that call the functions [my_funky_fcn.m](./my_funky_fcn.m), [ApproxExp.m](./ApproxExp.m), [MyDeriv.m](./MyDeriv.m), [f1.m](./f1.m), and [df1.m](./df1.m). 
