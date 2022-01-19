@@ -43,6 +43,7 @@ However, you should have access to the same relevant functionalities.
 ![Matlab Environment](./gui_example.png)
 
 The relevant areas are:
+
 * The "Toolbar" (at the top). This toolbar contains many various functions such as creating new Matlab files/scripts (more on these later), changing the path (more on this later), altering your preferences, and many more. 
 * The "Current Folder" window (at the left). This shows the contents of the current (or present) working directory. The full path leading to the current directory is also shown in the long horizontal bar just below the toolbar. 
 * The "Command Window" (in the center). This is the main interface for Matlab. Here you will type the commands you wish to execute (followed by "enter"). This is also where Matlab will print any textual information that results from the commands you run. 
@@ -110,7 +111,7 @@ If you are not a fan of using the Command Window, all of this can be accomplishe
 In the screenshot below, the bar circled in red shows the present working directory. 
 Circled in green are the various files that are within the present working directory. 
 I can navigate up and down the file tree (effectively changing the present workign directory) by clicking the icons just above the green circle and/or folders in the "Current Folder" window. 
-You will also notice there is a file caled "my_matlab_file.m" sitting in the "Current Folder". 
+You will also notice there is a file called "my_matlab_file.m" sitting in the "Current Folder". 
 More on that next. 
 
 ![Present Working Directory](./directory1.png)
@@ -160,8 +161,10 @@ x =
 
 This vector is indeed the solution to the equation ``A*x = v``. 
 
-If you look at the Workspace window, you will also notice that the variables ``A``, ``v``, and ``x`` should have appeared. 
+If you look at the Workspace window (see next screenshot), you will also notice that the variables ``A``, ``v``, and ``x`` should have appeared. 
 This is because any variables/data that a script creates will act exactly as if you had created them manually via the Command Window. 
+
+![Script Results](./script_output.png)
 
 <h3>Functions</h3>
 Matlab files that contain functions operate a little bit differently. 
@@ -183,6 +186,7 @@ A file that contains a function must begin and end with particular syntax:
 ```
 
 A few important things to note:
+
 * You can have a large number of outputs. Simply place them inside square brackets and separate them with commas. For example: ``[A,B,eps]``.
 * You can have multiple inputs as well. Place them all inside the parenthesis and separate them with commas. For example: ``(foo,bar)``.
 * The name of your function and the name of the file it is stored in **must** match. For example, the function ``solve_matrix`` must be contained in a file named "solve_matrix.m". 
@@ -214,7 +218,8 @@ foo =
 ```
 
 A few things of note here:
-* If you look at the workspace at this point, you will notice that there is a variable named ``foo``, but no variables named ``A``, ``v``, or ``x``. 
+
+* If you look at the workspace at this point (next screenshot), you will notice that there is a variable named ``foo``, but no variables named ``A``, ``v``, or ``x``. 
 This is because variables within functions are not publicly available to the workspace. 
 They are private (if you want to know more, look up the subject of "scoping" with regards to computer science). 
 Effectively, those variable names are completely internal to the function named "solve_matrix". 
@@ -223,6 +228,8 @@ This is actually one of the major advantages to functions as opposed to scripts.
 This is because our last command assigned the name ``foo`` to whatever the output of the function "solve_matrix". 
 The internal workings of the function (and thus the variable named ``x``) are completely obscured. 
 Think of functions as a black box. Input goes in, output comes out, and we have no knowedge of their internal workings when we call them from the Command Window. 
+
+![Function Results](./func_output.png)
 
 Finally, I want to draw attention to the line of comments at the top of my theoretical function file. 
 Any comments that come above line defining the inputs, function name, and outputs are treated as the "help" section of the function. 
@@ -250,3 +257,5 @@ A few of these commands actually call simply Matlab functions, so I have include
 * The pdf file can be found right [here](./matlab_tutorial.pdf).
 * A Matlab script that mirrors the walkthrough can be found [here](./matlab_tutorial.m).
 * The tutorial involves steps that call the functions [my_funky_fcn.m](./my_funky_fcn.m), [ApproxExp.m](./ApproxExp.m), [MyDeriv.m](./MyDeriv.m), [f1.m](./f1.m), and [df1.m](./df1.m). 
+
+**Remember:** In order for any of these provided ".m" files to be used, you will need to download them and place them into either your path, or your present working directory. 
