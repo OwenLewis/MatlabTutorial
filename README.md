@@ -49,7 +49,7 @@ The relevant areas are:
 * The "Command Window" (in the center). This is the main interface for Matlab. Here you will type the commands you wish to execute (followed by "enter"). This is also where Matlab will print any textual information that results from the commands you run. 
 * The "Workspace" (on the right). This shows all of the variables that Matlab currently has stored in memory (that are within scope), as well as a tiny amount of information pertaining to those variables (i.e. what "type" they are, etc). 
 
-If you chose to start Matlab from your shell (Linux & Mac users) without the graphical interface then you will be greated instead with something like this:
+If you chose to start Matlab from your shell (Linux & Mac users) without the graphical interface then you will be greeted instead with something like this:
 
 ![Matlab Environment](./nodesktop.png)
 
