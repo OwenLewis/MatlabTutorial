@@ -81,7 +81,7 @@ At any given time, Matlab is "running" in some directory on your computer.
 This is known as the "Present Working Directory". 
 When you run any command, Matlab will look for the necessary files/data in the present working directory, in addition to the path. 
 This means that if you place all of your Matlab files in a well organized folder, as long as that folder is the present working directory, Matlab will have access to all of your work (and the built in functions) without needing to modify the path in any way. 
-If you want to know what the present working directory is, you can use the command ``pwd``. 
+If you want to know what the present working directory is, you can use the ``pwd`` command  
 Matlab will return some text along the lines of 
 
 ```matlab
