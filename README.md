@@ -92,10 +92,159 @@ ans =
 
 
 In order to change the present working directory, you can use the ``cd`` command (for "change directory"). 
-For example, I could type 
+For example, I could type the following command and hit enter:
 
 ```matlab
 cd /Users/OwenLewis/directory/where/I/want/to/work
 ```
 
+This will change my present working directory. 
+Now, if I were to use the ``pwd`` command again, I would receive the following text:
+
+```matlab
+ans =
+
+    '/Users/OwenLewis/directory/where/I/want/to/work'
+```
+
+If you are not a fan of using the Command Window, all of this can be accomplished by using the graphical interface as well. 
+In the screenshot below, the bare circled in red shows the present working directory. 
+Circled in green are the various files that are within the present working directory. 
+I can navigate up and down the file try (effectively changing the present workign directory) by clicking the icons just above the green circle and/or folders in the "Current Folder" window. 
+You will also notice there is a file caled "my_matlab_file.m" sitting in the "Current Folder". 
+More on that next. 
+
 ![Present Working Directory](./directory1.png)
+
+<h2>Matlab Files</h2>
+
+To use Matlab effectively and efficiently you will want to create various Matlab files. 
+Matlab files are effectively just text files into which you write (mostly) Matlab commands exactly as you would have typed them into the command window. 
+You then name the file with the extension ".m". 
+Any text that comes after a percent sign (``%``) is considered a "comment" and will be ignored by Matlab (until the next line begins). 
+Comments are an important part of creating Matlab files, as they allow you to add text explaining to yourself (and anyone else) what your Matlab files is supposed to be doing. 
+Use them!
+
+Matlab files come in two important categories: scripts and functions. 
+They are largely similar, but behave in a few importantly distinct ways. 
+
+<h3>Scripts</h3>
+At their most basic, script files are just a giant list of Matlab commands that you wish to run in a sequential order. 
+When they are "run", Matlab will effectively input every bit of text within the script into the Command Window, in order. 
+Scripts are extremely useful if you must perform the same, large list of commands more than one time. 
+Instead of typing out 300 commands, waiting for the result, and the starting over, you can type them into a script file once, and then "run" that file as many times as you wish. 
+For example, a basic matlab script file might contain the following:
+
+```matlab
+%This is a comment and will be ignored
+%Lets create a 2x2 matrix
+A = [2,6;4,8];
+%and a vector
+v = [1;2];
+%Now lets solve the equation A*x = v:
+x = A\v
+```
+If I were to place this text into a file called "whateverIwant.m", I could run this list of command at any time (as long as that file is in the path, or the present working directory) via the command
+
+```matlab
+whateverIwant
+```
+
+Notice that the file name has to end in ".m", but running the script does not include this file extension. 
+Running this command will greet me with the following text in the Command Window:
+```matlab
+x =
+
+    0.5000
+         0
+```
+
+This vector is indeed the solution to the equation ``A*x = v``. 
+
+If you look at the Workspace window, you will also notice that the variables ``A``, ``v``, and ``x`` should have appeared. 
+This is because any variables/data that a script creates will act exactly as if you had created them manually via the Command Window. 
+
+<h3>Functions</h3>
+Matlab files that contain _functions_ operate a little bit differently. 
+The easiest way to think of them is as mathematical functions. 
+They take input, and give back output. 
+A file that contains a function must begin and end with particular syntax:
+
+```matlab 
+   %Here I put any comments about the overall behavior of the function
+   <outputs> = function <name_of_function>(<inputs>)
+   	.
+   	.
+   	.
+   	<a bunch of commands>
+   	.
+   	.
+   	.
+   end
+```
+
+A few important things to note:
+* You can have a large number of outputs. Simply place them inside square brackets and separate them with commas. For example: ``[A,B,eps]``.
+* You can have multiple inputs as well. Place them all inside the parenthesis and separate them with commas. For example: ``(foo,bar)``.
+* The name of your function and the name of the file it is stored in **must** match. For example, the function ``solve_matrix`` must be contained in a file named "solve_matrix.m". 
+
+For example, here is a potential Matlab function contained in the file "solve_matrix.m"
+
+```matlab 
+   %A very simple function to solve 2x2 matrix equations
+   x = function solve_matrix(A,v)
+   		%Lets solve the equation!
+   		x = A\v;
+   end
+```
+
+Now, to use the function that I have written, I call it via the command line. 
+However, because it is a _function_ I have to privide it with the necessary input:
+
+```matlab 
+	foo = solve_matrix([2,6;4,8],[1;2])
+```
+
+Running this command in the Command Window will result in the following text:
+
+```matlab
+foo =
+
+    0.5000
+         0
+```
+
+A few things of note here:
+* If you look at the workspace at this point, you will notice that there is a variable named ``foo``, but no variables named ``A``, ``v``, or ``x``. 
+This is because variables within functions are not publicly available to the workspace. 
+They are private (if you want to know more, look up the subject of "scoping" with regards to computer science). 
+Effectively, those variable names are completely internal to the function named "solve_matrix". 
+This is actually one of the major advantages to functions as opposed to scripts. 
+* The numerical result is the same as our example script, but the name is different. 
+This is because our last command assigned the name ``foo`` to whatever the output of the function "solve_matrix". 
+The internal workings of the function (and thus the variable named ``x``) are completely obscured. 
+Think of functions as a black box. Input goes in, output comes out, and we have know knowedge of their internal workings when we call them from the Command Window. 
+
+Finally, I want to draw attention to the line of comments at the top of my theoretical function file. 
+Any comments that come above line defining the inputs, function name, and outputs are treated as the "help" section of the function. 
+These can be viewed at any time by using the ``help`` command. 
+For example, I could invoke the following command:
+
+```matlab 
+help solve_matrix
+```
+and Matlab would greet me with the following text:
+``` 
+A very simple function to solve 2x2 matrix equations
+```
+
+It can be useful to put some time into these help sections of your functions: explaining what they do, what inputs are expected, and what the outputs represent. 
+
+
+<h2>Slightly less basic basics</h2>
+Now that we have gone over the bare basics of getting Matlab working, it is probably worthwhile to go through some exercises in creating and manipulating variables in Matlab. 
+Fortunately, my colleague Jacob Schroder has already put together a nice document to this effect. 
+Below, you will find a PDF version of a brief walkthough that he created. 
+I have also included a Matlab script file containin, in order, all of the various commands that get invoked in the walkthrough. 
+A few of these commands actually call simply Matlab functions, so I have included those as well. 
+
