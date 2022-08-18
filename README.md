@@ -251,7 +251,7 @@ It can be useful to put some time into these help sections of your functions: ex
 Now that we have gone over the bare basics of getting Matlab working, it is probably worthwhile to go through some exercises in creating and manipulating variables in Matlab. 
 Fortunately, my colleague Jacob Schroder has already put together a nice document to this effect. 
 Below, you will find a PDF version of a brief walkthough that he created. 
-I have also included a Matlab script file containig, in order, all of the various commands that get invoked in the walkthrough. 
+I have also included a Matlab script file containing, in order, all of the various commands that get invoked in the walkthrough. 
 A few of these commands actually call simple Matlab functions, so I have included those as well. 
 
 * The pdf file can be found right [here](./matlab_tutorial.pdf).
