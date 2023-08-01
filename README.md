@@ -110,7 +110,7 @@ ans =
 If you are not a fan of using the Command Window, all of this can be accomplished by using the graphical interface as well. 
 In the screenshot below, the bar circled in red shows the present working directory. 
 Circled in green are the various files that are within the present working directory. 
-I can navigate up and down the file tree (effectively changing the present workign directory) by clicking the icons just above the green circle and/or folders in the "Current Folder" window. 
+I can navigate up and down the file tree (effectively changing the present working directory) by clicking the icons just above the green circle and/or folders in the "Current Folder" window. 
 You will also notice there is a file called "my_matlab_file.m" sitting in the "Current Folder". 
 More on that next. 
 
