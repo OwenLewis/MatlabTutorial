@@ -36,7 +36,7 @@ To do this, you can add the ``-nodesktop`` and ``-nosplash`` options (see below)
 ![No Graphics, no splash](./command.png)
 
 <h3>Using Matlab</h3>
-Once you have started Matlab on your computer, you will be greated with something similar to the following screenshot (assuming you did not supress the graphical interface at startup). 
+Once you have started Matlab on your computer, you will be greeted with something similar to the following screenshot (assuming you did not supress the graphical interface at startup). 
 Not everyone's Matlab environment will be laid out the same way. Users have the ability to move/alter some of the relevant pieces, so yours may look slightly different. 
 However, you should have access to the same relevant functionalities. 
 
